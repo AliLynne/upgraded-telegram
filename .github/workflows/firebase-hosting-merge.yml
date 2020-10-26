@@ -21,3 +21,4 @@ jobs:
           projectId: control-panel-dev-71d25
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
+          REACT_APP_FIREBASE_PROJECT_ID: control-panel-dev-71d25
