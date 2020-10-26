@@ -15,6 +15,7 @@ jobs:
       - run: npm run build
         env:
           REACT_APP_FIREBASE_PROJECT_ID: "control-panel-dev-71d25"
+          REACT_APP_FIREBASE_KEY: "${{ secrets.REACT_APP_FIREBASE_KEY}}"
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
