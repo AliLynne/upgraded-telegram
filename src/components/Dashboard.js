@@ -22,6 +22,7 @@ const Dashboard = () => {
       <div>
         <h2>Profile</h2>
         {error && <p>{error}</p>}
+        <p>Add this paragraph</p>
         <strong>Email: </strong> {currentUser && currentUser.email}
         <Link to="/update-profile">Update profile</Link>
         <Link to="/notes">Notes</Link>
