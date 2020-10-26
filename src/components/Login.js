@@ -9,7 +9,11 @@ const Signup = () => {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
-  const { login } = useAuth();
+  const { login, currentUser } = useAuth();
+
+  if (currentUser) {
+    history.push("/");
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
