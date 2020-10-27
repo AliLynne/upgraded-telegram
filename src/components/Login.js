@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
@@ -8,13 +8,12 @@ const Signup = () => {
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
   const history = useHistory();
-  const { login } = useAuth();
 
-  // useEffect(() => {
-  //   if (currentUser) {
-  //     push("/");
-  //   }
-  // }, [currentUser, push]);
+  const { login, currentUser } = useAuth();
+
+  if (currentUser) {
+    history.push("/");
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();

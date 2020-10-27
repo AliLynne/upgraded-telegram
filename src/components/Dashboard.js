@@ -23,7 +23,7 @@ const Dashboard = () => {
         <h2>Profile</h2>
         {error && <p>{error}</p>}
         <strong>Email: </strong> {currentUser && currentUser.email}
-        <Link to="/update-profile">Update Profile</Link>
+        <Link to="/update-profile">Update profile</Link>
         <Link to="/notes">Notes</Link>
       </div>
       <button onClick={handleLogout}>Log Out</button>
