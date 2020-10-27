@@ -25,7 +25,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex flex-col  mx-auto bg-white mt-8 items-center p-3">
+    <div className="flex flex-col mx-auto bg-white mt-8 items-center p-3 w-screen max-w-md">
       <h2 className="mb-4 text-3xl">Log In</h2>
       {error && <p className="text-red-900 mb-4 mx-auto">{error}</p>}
       <form className="flex flex-col" onSubmit={handleSubmit}>
