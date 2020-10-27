@@ -12,13 +12,13 @@ const Dashboard = () => {
 
     try {
       await logout();
-      history.push("/login");
+      history.push("/");
     } catch (err) {
       setError("Failed to log out");
     }
   };
   return (
-    <>
+    <main className="flex flex-col mx-auto bg-white mt-8 items-center p-3 w-screen max-w-3xl shadow-xs">
       <div>
         <h2>Profile</h2>
         {error && <p>{error}</p>}
@@ -27,7 +27,7 @@ const Dashboard = () => {
         <Link to="/notes">Notes</Link>
       </div>
       <button onClick={handleLogout}>Log Out</button>
-    </>
+    </main>
   );
 };
 

@@ -1,23 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import classnames from "classnames";
 
 // Wrapper component for li styling
-const ListItem = ({ children }) => {
-  return <li className="p-3">{children}</li>;
+const ListItem = (props) => {
+  const { children, className } = props;
+  const classes = classnames("p-3", className);
+  return <li className={classes}>{children}</li>;
 };
 
 const NavBar = () => {
   const { currentUser } = useAuth();
   return (
-    <ul className="flex justify-end">
+    <ul className="flex">
       {currentUser && (
         <>
           <ListItem>
-            <Link to="/">Dashboard</Link>
+            <Link to="/" className="hover:text-red-900">
+              Dashboard
+            </Link>
           </ListItem>
           <ListItem>
-            <Link to="/notes">Notes</Link>
+            <Link to="/notes" className="hover:text-red-900">
+              Notes
+            </Link>
           </ListItem>
         </>
       )}

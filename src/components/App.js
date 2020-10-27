@@ -7,14 +7,14 @@ import UpdateProfile from "./UpdateProfile";
 import Notes from "./Notes";
 import { AuthProvider } from "../context/AuthContext";
 import PrivateRoute from "./PrivateRoute";
-import NavBar from "./NavBar";
+import Header from "./Header";
 
 const App = () => {
   return (
     <div className="bg-red-200 h-screen">
       <Router>
         <AuthProvider>
-          <NavBar />
+          <Header />
           <Switch>
             <PrivateRoute exact path="/" component={Dashboard} />
             <PrivateRoute path="/update-profile" component={UpdateProfile} />
