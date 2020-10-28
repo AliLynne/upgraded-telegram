@@ -9,12 +9,14 @@ const Note = ({ note }) => {
     return deleteNote(note.id);
   };
   return (
-    <li>
-      <p>
+    <li className="mb-5 flex flex-col">
+      <p className="text-right text-gray-700">
         {date.toLocaleDateString()} - {date.toLocaleTimeString()}
       </p>
-      <p>{note.data.note}</p>
-      <button onClick={removeNote}>Delete</button>
+      <p className="p-3">{note.data.note}</p>
+      <button className="text-red-500 self-end" onClick={removeNote}>
+        Delete
+      </button>
     </li>
   );
 };

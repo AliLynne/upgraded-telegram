@@ -11,7 +11,7 @@ import Header from "./Header";
 
 const App = () => {
   return (
-    <div className="bg-red-200 h-screen">
+    <div className="bg-gradient-to-b from-pink-900 h-screen">
       <Router>
         <AuthProvider>
           <Header />

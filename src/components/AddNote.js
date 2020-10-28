@@ -21,19 +21,26 @@ const AddNote = () => {
     }
   };
   return (
-    <>
-      <h2>Add a note</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
+    <div className="flex flex-col align-center m-3 p-3">
+      <h2 className="text-center text-lg uppercase mb-3">Add a note</h2>
+      <form
+        className="flex flex-col p-3 bg-gradient-to-b from-pink-900 shadow"
+        onSubmit={handleSubmit}
+      >
+        <label className="flex flex-col text-white">
           Note:
-          <textarea name="note" ref={noteRef} />
+          <textarea className="my-3 shadow" name="note" ref={noteRef} />
         </label>
-        <button disabled={loading} type="submit">
+        <button
+          className="bg-pink-900 text-white mt-2 p-3 hover:bg-pink-800"
+          disabled={loading}
+          type="submit"
+        >
           Save
         </button>
         {error && <p>{error}</p>}
       </form>
-    </>
+    </div>
   );
 };
 

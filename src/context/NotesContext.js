@@ -27,7 +27,10 @@ export const NotesProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const query = db.collection("notes").where("userId", "==", currentUser.uid);
+    const query = db
+      .collection("notes")
+      .where("userId", "==", currentUser.uid)
+      .orderBy("date", "desc");
     const unsubscribe = query.onSnapshot(
       (querySnapshot) => {
         // set notes list here

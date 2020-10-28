@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 const Signup = () => {
@@ -53,16 +53,11 @@ const Signup = () => {
         <button
           disabled={loading}
           type="submit"
-          className="bg-red-200 w-1/4 mx-auto mb-4 p-4"
+          className="bg-pink-900 text-white mt-2 p-3 hover:bg-pink-800"
         >
           Log In
         </button>
       </form>
-      <div className="mb-4">
-        <p>
-          <Link to="/forgot-password">Forgot Password?</Link>
-        </p>
-      </div>
     </div>
   );
 };
